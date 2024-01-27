@@ -1,0 +1,5 @@
+package com.basic.thread;
+
+public class JavaBasicThreadWithThreadClass extends Thread {
+
+}

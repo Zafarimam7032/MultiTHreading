@@ -1,0 +1,56 @@
+public class MovingTotal {
+	
+	static int [] arr=new int[] { 1, 2, 3, 4 };
+	static int length=arr.length;
+    /**
+     * Adds/appends list of integers at the end of internal list.
+     */
+	
+    public void append(int[] list) {
+    	
+       for(int i=0;i<list.length;i++) {
+    	   arr[++length]=list[i];
+       }
+    }
+
+    /**
+     * Returns boolean representing if any three consecutive integers in the
+     * internal list have given total.
+     */
+    public boolean contains(int total) {
+    	boolean containflag=false;
+    	int sumtoatal=0;
+      for(int i=0;i<arr.length;i++) {
+    	  for(int j=i;j<3;i++) {
+    		  sumtoatal=sumtoatal+arr[i];
+    	  }
+    	  if(sumtoatal==total) {
+    		  containflag=true;
+    		  break;
+    	  }
+    		  sumtoatal=0;
+    	  
+    	 
+    	  
+      }
+      return containflag;
+    }
+
+    public static void main(String[] args) {
+        MovingTotal movingTotal = new MovingTotal();
+
+       
+
+        System.out.println(movingTotal.contains(6));
+        System.out.println(movingTotal.contains(9));
+        System.out.println(movingTotal.contains(12));
+        System.out.println(movingTotal.contains(7));
+
+        movingTotal.append(new int[] { 5 });
+
+        System.out.println(movingTotal.contains(6));
+        System.out.println(movingTotal.contains(9));        
+        System.out.println(movingTotal.contains(12));
+        System.out.println(movingTotal.contains(7));
+    }
+}

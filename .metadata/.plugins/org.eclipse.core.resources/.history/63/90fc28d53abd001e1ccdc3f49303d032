@@ -1,0 +1,14 @@
+package com.zafar.thread.periorty;
+
+public class ThreadPeriortyExample extends Thread {
+
+	@Override
+	public void run() {
+		System.out.println("thread Periorty check");
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

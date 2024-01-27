@@ -1,0 +1,9 @@
+package com.zafar.thread.getName;
+
+public class ThreadNameExample {
+	public static void main(String[] args) {
+		Thread thread=new Thread();
+		System.out.println(thread.getName());
+	}
+
+}

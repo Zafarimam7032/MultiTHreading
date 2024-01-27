@@ -1,0 +1,5 @@
+package com.zafar.thread.getId;
+
+public class GetIdExampleWithThreadClass {
+
+}

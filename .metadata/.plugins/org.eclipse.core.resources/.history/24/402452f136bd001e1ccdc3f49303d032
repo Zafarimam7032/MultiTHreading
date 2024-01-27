@@ -1,0 +1,5 @@
+package com.zafar.thread.getName;
+
+public class ThreadNameExample {
+
+}

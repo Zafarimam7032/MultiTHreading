@@ -1,0 +1,17 @@
+package com.zafar.thread.periorty;
+
+public class ThreadPeriortyExample extends Thread {
+
+	@Override
+	public void run() {
+		System.out.println("thread Periorty check");
+	}
+	
+	public static void main(String[] args) {
+		Thread.currentThread().setPriority(MAX_PRIORITY);
+		Thread thread=new Thread();
+		System.out.println(thread.getPriority());
+		
+	}
+
+}

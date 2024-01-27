@@ -1,0 +1,6 @@
+public class MovingTotal {
+
+	public static int display() {
+		
+	}
+}

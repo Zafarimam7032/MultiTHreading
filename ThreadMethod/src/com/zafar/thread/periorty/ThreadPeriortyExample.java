@@ -1,0 +1,30 @@
+package com.zafar.thread.periorty;
+
+public class ThreadPeriortyExample extends Thread {
+
+	@Override
+	public void run() {
+		System.out.println("thread Periorty check");
+		System.out.println(Thread.currentThread().getPriority());
+	}
+	
+	public static void main(String[] args) {
+		Thread.currentThread().setPriority(MAX_PRIORITY);
+		Thread thread=new Thread();
+		System.out.println(thread.getPriority());
+		ThreadPeriortyExample example=new ThreadPeriortyExample();
+		example.setPriority(NORM_PRIORITY);
+		example.start();
+		
+		ThreadPeriortyExample example1=new ThreadPeriortyExample();
+		example1.setPriority(MIN_PRIORITY);
+		example1.start();
+		
+		ThreadPeriortyExample example2=new ThreadPeriortyExample();
+		example2.setPriority(MAX_PRIORITY);
+		example2.start();
+		
+		
+	}
+
+}

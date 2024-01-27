@@ -1,0 +1,19 @@
+package com.zafar.thread.getId;
+
+public class GetIdExampleWithInterface implements Runnable {
+	
+	
+	@Override
+	public void run() {
+		System.out.println("run method");
+	}
+
+	public static void main(String[] args) {
+		
+		Thread thread=new Thread();
+		System.out.println(thread.getId());
+		GetIdExampleWithInterface class1=new GetIdExampleWithInterface();
+		System.out.println(class1.getId());
+	}
+
+}
